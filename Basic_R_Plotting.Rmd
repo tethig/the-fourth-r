@@ -3,17 +3,7 @@ title: "Basic Plotting in R"
 author: "Ben Dickins"
 date: "`r lubridate::today()`"
 output:
-  github_document:
-    theme: cosmo
-    highlight: zenburn
-    toc: true
-    toc_float: true
-    toc_depth: 3
-    number_sections: true
-    fig_width: 10
-    fig_height: 7
-    fig_caption: yes
-    df_print: paged
+  github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -26,7 +16,6 @@ knitr::opts_chunk$set(echo = TRUE)
 Before we can do today's exercises we need to do something extra. We need to get access to some extra functions that aren't available in "base" R. To do this we will load a package into R. In R packages are called libraries and a library is a collection of functions that are usually designed to do similar types of things (e.g., analyzing data in a particular way). In this case we are going to load a really "meta"-package (a package so big that it actually contains other packages) and this is called the `tidyverse`.
 
 ```{r tidy-verse}
-klippy::klippy()
 library(tidyverse)
 ```
 
@@ -45,7 +34,6 @@ I will remind you how to do #s 1 and 2 in my video.
 ## Read in and View Data
 Now that we are in the right place, let's read in the data, but this time we are going to use a function from the tidyverse that works with tab-separated values (files ending `.tsv`):
 ```{r phosphate}
-klippy::klippy()
 phosphate <- read_tsv("phosphate_assay.tsv")
 phosphate
 ```
@@ -58,7 +46,6 @@ I will tell you a little bit about that object (which is called a "tibble") in t
 Did you notice how each replicate is a separate column? Let's start by drawing a graph with the concentration column (on the x axis) and the first replicate (on the y axis):
 
 ```{r simple-plot}
-klippy::klippy()
 plot(x = phosphate$conc_uM, y = phosphate$rep1)
 ```
 It looks like when the concentration goes up so does the value of the replicate (measured as optical density at 600nm).
@@ -66,7 +53,6 @@ It looks like when the concentration goes up so does the value of the replicate 
 ## Decorate the Plot
 Maybe we should put those units into the plot properly:
 ```{r decorated-plot}
-klippy::klippy()
 plot(x = phosphate$conc_uM, y = phosphate$rep1, xlab = "concentration (μM)", ylab = "OD (600nm)")
 ```
 
@@ -74,7 +60,6 @@ plot(x = phosphate$conc_uM, y = phosphate$rep1, xlab = "concentration (μM)", yl
 Let's look at that relationship using a simple linear (regression) model. The function for linear models is `lm()`. In this case we will use this function to construct a model and assign the result to an object called `model1`. We write the name of the model to view its key properties:
 
 ```{r model-1}
-klippy::klippy()
 model1 <- lm(rep1 ~ conc_uM, data=phosphate)
 model1
 ```
@@ -84,7 +69,6 @@ So you can see that the slope or gradient is `0.0002288` while the y intercept i
 ## Adding Regression Line to Plot
 
 ```{r regression-plot}
-klippy::klippy()
 plot(x = phosphate$conc_uM, y = phosphate$rep1, xlab = "", ylab = "")
 abline(model1, col="blue")
 ```
@@ -99,13 +83,11 @@ What happens? Like the `abline()` function above, the `title()` function can be 
 Now the above is all very well, but we've only plotted one replicate. Just for a second let's remind ourselves of the column names in our data object:
 
 ```{r names}
-klippy::klippy()
 names(phosphate)
 ```
 
 Let's take the names from the 3rd to the last column and assign them to a new object:
 ```{r repcols}
-klippy::klippy()
 repcols <- names(phosphate)[3:7]
 repcols
 ```
@@ -116,7 +98,6 @@ Now you can see we need to plot all five columns in repcols.
 Now this is a bit more complicated. Here you'll see two more functions that can be used to add elements to a plot (`points()` and `legend()`) - see if you can figure out what they do:
 
 ```{r allrep-plot}
-klippy::klippy()
 plot(phosphate$conc_uM, phosphate$rep1, pch = 1, ylim = c(0, 0.35), xlab = "", ylab = "")
 points(phosphate$conc_uM, phosphate$rep2, pch = 2, xlab = "", ylab = "")
 points(phosphate$conc_uM, phosphate$rep3, pch = 3, xlab = "", ylab = "")
@@ -134,7 +115,6 @@ Tidyverse is a bit of a weird name isn't it? Well it's actually a really good na
 How can we get the `phosphate` data into a tidy format? We should have one column for optical density (the y value) and, because every measurement should have its own row, we also need a column to tell us what replicate each measurement is. There is a special helper function in `tidyverse` to help us do this and that is `pivot_longer()`:
 
 ```{r phosphate_long}
-klippy::klippy()
 phosphate_long <- pivot_longer(phosphate, rep1:rep5, names_to = "replicate", values_to = "OD600nm")
 phosphate_long
 ```
@@ -144,7 +124,6 @@ Look at the "arguments" (separated by commas) inside `pivot_longer()`. First we 
 ## Plot with "Grammar of Graphics"
 Tidyverse contains an awesome function called `ggplot()`. It can be a little hard to learn at first (you may find this [reference chapter](https://r-graphics.org/chapter-ggplot2) helpful), but here is how we can draw a plot with all the data in it:
 ```{r allreps-ggplot}
-klippy::klippy()
 ggplot(phosphate_long, aes(x=conc_uM, y=OD600nm, shape=replicate)) + geom_point()
 ```
 First we tell it the name of the data. Then the next argument uses the `aes()` function to tell `ggplot()` the "aesthetic mappings", i.e., which variables are associated with which features of the plot. That's kind of simple for the x and y axes, but try replacing `shape` in the above code with `colour`. What do you see? What if you remove that argument altogether.
@@ -155,7 +134,6 @@ Then there is this slightly weird (and unique to `ggplot()`) feature where we ad
 In `ggplot()` this is really each to do using the `stat_smooth()` function. We just need to add one more thing to the plot (and you might notice that we put the functions on different lines here which is fine as long as there is a plus on every line if we expect more functions):
 
 ```{r best-ggplot, fig.cap = "Our most informative figure"}
-klippy::klippy()
 ggplot(phosphate_long, aes(x=conc_uM, y=OD600nm)) + 
   geom_point(aes(colour=replicate)) + 
   stat_smooth(method=lm)
@@ -166,7 +144,6 @@ The only thing you might notice here if you look really closely is that we moved
 ## Plot with Average Values
 This is actually very complex, so please don't worry if you don't understand this last example which introduces an idea called the pipe `%>%`, but it shows you how you can summarize data and send it into the next function (and ultimately into `ggplot()`):
 ```{r mean-ggplot}
-klippy::klippy()
 phosphate_long %>% 
   group_by(sample, conc_uM) %>% 
   summarise(meanOD600nm = mean(OD600nm)) %>% 
@@ -183,19 +160,16 @@ These references were linked above:
 
 But when attributing, we mustn't forget about software! R actually contains a function that provides us with bibliographic details! For all of R:
 ```{r citations-1}
-klippy::klippy()
 citation()
 ```
 
 And for a particular package:
 ```{r citations-2}
-klippy::klippy()
 citation("tidyverse")
 ```
 
 # Session Information
 For reproducibility we sometimes print out information about our setup and computer:
 ```{r session-info}
-klippy::klippy()
 sessionInfo()
 ```
