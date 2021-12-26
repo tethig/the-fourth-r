@@ -3,7 +3,7 @@ title: "Basic Plotting in R"
 author: "Ben Dickins"
 date: "`r lubridate::today()`"
 output:
-  html_document:
+  github_document:
     theme: cosmo
     highlight: zenburn
     toc: true
