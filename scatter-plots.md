@@ -1,7 +1,7 @@
 Basic Plotting in R
 ================
 Ben Dickins
-2021-12-26
+2021-12-27
 
 # Preparation
 
@@ -55,7 +55,7 @@ time we are going to use a function from the tidyverse that works with
 tab-separated values (files ending `.tsv`):
 
 ``` r
-phosphate <- read_tsv("phosphate_assay.tsv")
+phosphate <- read_tsv("data/phosphate-assay.tsv")
 ```
 
     ## Rows: 6 Columns: 7
@@ -99,9 +99,9 @@ first replicate (on the y axis):
 plot(x = phosphate$conc_uM, y = phosphate$rep1)
 ```
 
-![](Basic_R_Plotting_files/figure-gfm/simple-plot-1.png)<!-- --> It
-looks like when the concentration goes up so does the value of the
-replicate (measured as optical density at 600nm).
+![](scatter-plots_files/figure-gfm/simple-plot-1.png)<!-- --> It looks
+like when the concentration goes up so does the value of the replicate
+(measured as optical density at 600nm).
 
 ## Decorate the Plot
 
@@ -111,7 +111,7 @@ Maybe we should put those units into the plot properly:
 plot(x = phosphate$conc_uM, y = phosphate$rep1, xlab = "concentration (μM)", ylab = "OD (600nm)")
 ```
 
-![](Basic_R_Plotting_files/figure-gfm/decorated-plot-1.png)<!-- -->
+![](scatter-plots_files/figure-gfm/decorated-plot-1.png)<!-- -->
 
 ## Simple Regression
 
@@ -146,10 +146,10 @@ plot(x = phosphate$conc_uM, y = phosphate$rep1, xlab = "", ylab = "")
 abline(model1, col="blue")
 ```
 
-![](Basic_R_Plotting_files/figure-gfm/regression-plot-1.png)<!-- -->
-Cool right? We added the regression line to the plot. Did you notice how
-we added empty information to the plot labels? Try typing this new line
-of code:
+![](scatter-plots_files/figure-gfm/regression-plot-1.png)<!-- --> Cool
+right? We added the regression line to the plot. Did you notice how we
+added empty information to the plot labels? Try typing this new line of
+code:
 
 `title(xlab = "concentration (μM)", ylab = "OD (600nm)")`
 
@@ -196,7 +196,7 @@ title(xlab = "concentration (μM)", ylab = "OD at 600nm")
 legend("topright", legend = repcols, pch = 1:5)
 ```
 
-![](Basic_R_Plotting_files/figure-gfm/allrep-plot-1.png)<!-- --> To
+![](scatter-plots_files/figure-gfm/allrep-plot-1.png)<!-- --> To
 understand the functions you can use the `?` notation for example read
 the help file for `?points` and see if you can find out what the `pch`
 argument is doing…
@@ -258,13 +258,13 @@ how we can draw a plot with all the data in it:
 ggplot(phosphate_long, aes(x=conc_uM, y=OD600nm, shape=replicate)) + geom_point()
 ```
 
-![](Basic_R_Plotting_files/figure-gfm/allreps-ggplot-1.png)<!-- -->
-First we tell it the name of the data. Then the next argument uses the
-`aes()` function to tell `ggplot()` the “aesthetic mappings”, i.e.,
-which variables are associated with which features of the plot. That’s
-kind of simple for the x and y axes, but try replacing `shape` in the
-above code with `colour`. What do you see? What if you remove that
-argument altogether.
+![](scatter-plots_files/figure-gfm/allreps-ggplot-1.png)<!-- --> First
+we tell it the name of the data. Then the next argument uses the `aes()`
+function to tell `ggplot()` the “aesthetic mappings”, i.e., which
+variables are associated with which features of the plot. That’s kind of
+simple for the x and y axes, but try replacing `shape` in the above code
+with `colour`. What do you see? What if you remove that argument
+altogether.
 
 Then there is this slightly weird (and unique to `ggplot()`) feature
 where we add the geometric function that is used to make the plot (in
@@ -289,10 +289,10 @@ ggplot(phosphate_long, aes(x=conc_uM, y=OD600nm)) +
     ## `geom_smooth()` using formula 'y ~ x'
 
 ![Our most informative
-figure](Basic_R_Plotting_files/figure-gfm/best-ggplot-1.png) The only
-thing you might notice here if you look really closely is that we moved
-the colour attribute into the `geom_points()` function. Try moving it
-back to the main `ggplot()` call. What happens?
+figure](scatter-plots_files/figure-gfm/best-ggplot-1.png) The only thing
+you might notice here if you look really closely is that we moved the
+colour attribute into the `geom_points()` function. Try moving it back
+to the main `ggplot()` call. What happens?
 
 ## Plot with Average Values
 
@@ -312,8 +312,8 @@ phosphate_long %>%
 
     ## `geom_smooth()` using formula 'y ~ x'
 
-![](Basic_R_Plotting_files/figure-gfm/mean-ggplot-1.png)<!-- -->
-Generally you won’t need a complex example like this (instead see Figure
+![](scatter-plots_files/figure-gfm/mean-ggplot-1.png)<!-- --> Generally
+you won’t need a complex example like this (instead see Figure
 \\@ref{fig:best-ggplot} which has the advantage that we can see all the
 data)…
 
