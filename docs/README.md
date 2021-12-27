@@ -11,7 +11,7 @@ Please follow the links in this table to view content online:
 
 | Level | Skill                     | Location              | Link                                                                                   |
 |-------|---------------------------|-----------------------|----------------------------------------------------------------------------------------|
-| 1     | basic plots and tidy data | the-fourth-r-main/    | [GitHub R Markdown](https://github.com/tethig/the-fourth-r/blob/main/scatter-plots.md) |
+| 1     | basic plots and tidy data | the-fourth-r-main/    | [GitHub R Markdown](scatter-plots.html) |
 | 2     | heat maps                 | the-fourth-r-main/    | [Jupyter Notebook](https://github.com/tethig/the-fourth-r/blob/main/heat-maps.ipynb)   |
 | 3     | time series               | the-fourth-r-main/    | [Jupyter Notebook](https://github.com/tethig/the-fourth-r/blob/main/time-series.ipynb) |
 | 4     | bonus material            | the-fourth-r-main/    | [GitHub Markdown](https://github.com/tethig/the-fourth-r/blob/main/bonus-material.md)  |
