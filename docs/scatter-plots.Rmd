@@ -18,6 +18,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = '..')
 ```
 
 ```{r klippy, echo=FALSE, include=TRUE}
@@ -48,7 +49,7 @@ I will remind you how to do #s 1 and 2 in my video.
 ## Read in and View Data
 Now that we are in the right place, let's read in the data, but this time we are going to use a function from the tidyverse that works with tab-separated values (files ending `.tsv`):
 ```{r phosphate}
-phosphate <- read_tsv("phosphate_assay.tsv")
+phosphate <- read_tsv("data/phosphate-assay.tsv")
 phosphate
 ```
 I will tell you a little bit about that object (which is called a "tibble") in the video and show you a few tricks to view the data in different ways.

@@ -1,5 +1,5 @@
 ## Introduction
-Welcome to the Dickins lab R learning resource. As well as being the [title of a novel](https://en.wikipedia.org/wiki/The_Fourth_%22R%22) "the fourth R" references the concept of the three Rs, that is: **R**eading, w**R**iting and a**R**ithmetic, skills considered essential for accessing wider learning. [R](https://www.r-project.org) arguably deserves a place in this list. R is a high-level language with strengths in statistical calculation and graphics. Learning R will give you the ability to program a computer, analyze many types of data and construct visually appealing and informative graphics to represent data and analyses.
+Welcome to the Dickins lab R learning resource. As well as being the [title of a novel](https://en.wikipedia.org/wiki/The_Fourth_%22R%22) "the fourth R" alludes to the concept of the three Rs, that is: **R**eading, w**R**iting and a**R**ithmetic, skills considered essential for accessing wider learning. [R](https://www.r-project.org) arguably deserves a place in this list. R is a high-level language with strengths in statistical calculation and graphics. Learning R will give you the ability to program a computer, analyze many types of data and construct visually appealing and informative graphs to represent data and analyses.
 
 This page provides a starting point for R learning. It can be viewed online, but to follow along interactively you also need to download a copy of the GitHub repository on which this page is based.
 
@@ -9,12 +9,29 @@ You may download a copy of this "repository" by clicking on [this link](https://
 ## Following Online
 Please follow the links in this table to view content online:
 
-| Level | Skill                     | Location              | Link                                                                                   |
-|-------|---------------------------|-----------------------|----------------------------------------------------------------------------------------|
-| 1     | basic plots and tidy data | the-fourth-r-main/    | [GitHub R Markdown](scatter-plots.html) |
-| 2     | heat maps                 | the-fourth-r-main/    | [Jupyter Notebook](https://github.com/tethig/the-fourth-r/blob/main/heat-maps.ipynb)   |
-| 3     | time series               | the-fourth-r-main/    | [Jupyter Notebook](https://github.com/tethig/the-fourth-r/blob/main/time-series.ipynb) |
-| 4     | bonus material            | the-fourth-r-main/    | [GitHub Markdown](https://github.com/tethig/the-fourth-r/blob/main/bonus-material.md)  |
+| Level | Skill                     | Location                | Link                                                                                   |
+|-------|---------------------------|-------------------------|----------------------------------------------------------------------------------------|
+| 1     | what is R?                | what-is-r/              | [Slidify Presentation](https://bendickins.net/what-is-r/)                              |
+| 2     | basic plots and tidy data | the-fourth-r-main/docs/ | [HTML R Markdown](scatter-plots.html)                                                  |
+| 3     | heat maps                 | the-fourth-r-main/      | [Jupyter Notebook](https://github.com/tethig/the-fourth-r/blob/main/heat-maps.ipynb)   |
+| 4     | time series               | the-fourth-r-main/      | [Jupyter Notebook](https://github.com/tethig/the-fourth-r/blob/main/time-series.ipynb) |
+| 5     | bonus material            | the-fourth-r-main/      | [GitHub Markdown](https://github.com/tethig/the-fourth-r/blob/main/bonus-material.md)  |
+
+To do:
+- simple codes
+- reading data
+- object types
+- data wrangling
+- built-in functions
+- basic plots
+- summary statistics
+- basic statistics
+- power calculations
+- introduction to tidyverse
+- types of graphical functions
+- examining data
+- bar charts
+- introduction to ggplot
 
 Notes:
 - Time Series Data: these data are from my fitness tracker and are in a JSON-like format. So this example, shows how to wrangle data, read JSON and handle themes and times in ggplot2.
