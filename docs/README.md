@@ -9,29 +9,24 @@ You may download a copy of this "repository" by clicking on [this link](https://
 ## Following Online
 Please follow the links in this table to view content online:
 
-| Level | Skill                     | Location                | Link                                                                                   |
-|-------|---------------------------|-------------------------|----------------------------------------------------------------------------------------|
-| 1     | what is R?                | what-is-r/              | [Quarto Presentation](https://bendickins.net/what-is-r/)                              |
-| 2     | basic plots and tidy data | the-fourth-r-main/docs/ | [HTML R Markdown](scatter-plots.html)                                                  |
-| 3     | heat maps                 | the-fourth-r-main/      | [Jupyter Notebook](https://github.com/tethig/the-fourth-r/blob/main/heat-maps.ipynb)   |
-| 4     | time series               | the-fourth-r-main/      | [Jupyter Notebook](https://github.com/tethig/the-fourth-r/blob/main/time-series.ipynb) |
-| 5     | bonus material            | the-fourth-r-main/      | [GitHub Markdown](https://github.com/tethig/the-fourth-r/blob/main/bonus-material.md)  |
-
-To do:
-- simple codes
-- reading data
-- object types
-- data wrangling
-- built-in functions
-- basic plots
-- summary statistics
-- basic statistics
-- power calculations
-- introduction to tidyverse
-- types of graphical functions
-- examining data
-- bar charts
-- introduction to ggplot
+| Level  | Skill                     | Location                | Link                                                                                   |
+|--------|---------------------------|-------------------------|----------------------------------------------------------------------------------------|
+| 1      | what is R?                | what-is-r/              | [Quarto Presentation](https://bendickins.net/what-is-r/)                               |
+| 2      | basic plots and tidy data | the-fourth-r-main/docs/ | [HTML R Markdown](scatter-plots.html)                                                  |
+| 3      | Penguin Workshop          | the-fourth-r-main/pdfs/ | [PDF Document](docs/PenguinsWorkshop.pdf)                                              |
+| 4      | simple codes              | the-fourth-r-main/pdfs/ | [PDF Document](docs/1-simple-codes.pdf)                                                |
+| 5      | reading data              | the-fourth-r-main/pdfs/ | [PDF Document](docs/2-reading-data.pdf)                                                |
+| 6      | object types              | the-fourth-r-main/pdfs/ | [PDF Document](docs/3-object-types.pdf)                                                |
+| 7      | data wrangling            | the-fourth-r-main/pdfs/ | [PDF Document](docs/4-data-wrangling.pdf)                                              |
+| 8      | function                  | the-fourth-r-main/pdfs/ | [PDF Document](docs/5-functions.pdf)                                                   |
+| 9      | baic plots                | the-fourth-r-main/pdfs/ | [PDF Document](docs/6-basic-plots.pdf)                                                 |
+| 10     | summary statistics        | the-fourth-r-main/pdfs/ | [PDF Document](docs/7-summary-statistics.pdf)                                          |
+| 11     | basic statistics          | the-fourth-r-main/pdfs/ | [PDF Document](docs/8-basic-statistics.pdf)                                            |
+| 12     | introduction to tidyverse | the-fourth-r-main/pdfs/ | [PDF Document](docs/9-tidyverse-introduction.pdf)                                      |
+| 13     | advanced base graphics    | the-fourth-r-main/pdfs/ | [PDF Document](docs/10-advanced-base-graphics.pdf)                                     |
+| 14     | ggplot2 graphics          | the-fourth-r-main/pdfs/ | [PDF Document](docs/11-ggplot2-graphics.pdf)                                           |
+| 15     | time series               | the-fourth-r-main/      | [Jupyter Notebook](https://github.com/tethig/the-fourth-r/blob/main/time-series.ipynb) |
+| 16     | bonus material            | the-fourth-r-main/      | [GitHub Markdown](https://github.com/tethig/the-fourth-r/blob/main/bonus-material.md)  |
 
 Notes:
 - Time Series Data: these data are from my fitness tracker and are in a JSON-like format. So this example, shows how to wrangle data, read JSON and handle themes and times in ggplot2.

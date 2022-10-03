@@ -1,5 +1,5 @@
 ---
-title: "Week 17 Plotting in R"
+title: "Basic Plotting in R"
 author: "Ben Dickins"
 date: "`r lubridate::today()`"
 output:
