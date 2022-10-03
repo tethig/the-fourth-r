@@ -11,7 +11,7 @@ Please follow the links in this table to view content online:
 
 | Level | Skill                     | Location                | Link                                                                                   |
 |-------|---------------------------|-------------------------|----------------------------------------------------------------------------------------|
-| 1     | what is R?                | what-is-r/              | [Slidify Presentation](https://bendickins.net/what-is-r/)                              |
+| 1     | what is R?                | what-is-r/              | [Quarto Presentation](https://bendickins.net/what-is-r/)                              |
 | 2     | basic plots and tidy data | the-fourth-r-main/docs/ | [HTML R Markdown](scatter-plots.html)                                                  |
 | 3     | heat maps                 | the-fourth-r-main/      | [Jupyter Notebook](https://github.com/tethig/the-fourth-r/blob/main/heat-maps.ipynb)   |
 | 4     | time series               | the-fourth-r-main/      | [Jupyter Notebook](https://github.com/tethig/the-fourth-r/blob/main/time-series.ipynb) |
