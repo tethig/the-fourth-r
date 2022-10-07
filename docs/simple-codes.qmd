@@ -1,0 +1,73 @@
+---
+title: "Simple Codes"
+author: "Ben Dickins"
+format: 
+  revealjs:
+    theme: [moon, custom.scss]
+execute:
+  echo: true
+editor: visual
+---
+
+## Expression
+
+There are three types of expression in R\
+1. Numbers: 1, 2, 0.2, -5, etc\
+2. Strings: alphabets or anything that is input by "" into R\
+3. Logical: `TRUE`/`FALSE`
+
+## Expression
+
+-   Numbers:
+
+```{r}
+#| eval: false
+2+3
+```
+
+-   Strings:
+
+```{r}
+#| eval: false
+"Hello"
+```
+
+-   `TRUE`/`FALSE`
+
+```{r}
+#| eval: false
+3<4
+2+4 == 4
+```
+
+## Arithmetic Operators
+
+`x + y` sum\
+`x - y` subtract\
+`x * y` multiply\
+`x / y` divide\
+`x ^ y` power
+
+## Arithmetic Operators
+
+Do it yourself:
+
+```{r}
+2+4
+2^3
+850/10
+220-20
+```
+
+## Storing Values
+
+-   In all programming languages we can store values in variables and access them later.
+-   This can be done in various ways using a selection of assignment operators.
+-   The most commonly used assignment operator is `<-`, see the example below:
+
+```{r}
+x <- 3
+y <- "Hey!"
+```
+
+Note: In most contexts the `=` operator can be used as an alternative.
