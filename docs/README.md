@@ -14,7 +14,7 @@ Please follow the links in this table to view content online:
 | 1      | what is R?                | what-is-r/              | [Quarto Presentation](https://bendickins.net/what-is-r/)                               |
 | 2      | basic plots and tidy data | the-fourth-r-main/docs/ | [HTML R Markdown](scatter-plots.html)                                                  |
 | 3      | Penguin Workshop          | the-fourth-r-main/pdfs/ | [PDF Document](../blob/main/pdfs/PenguinsWorkshop.pdf)                                 |
-| 4      | simple codes              | the-fourth-r-main/docs/ | [Quarto Presentation](../docs/simple-codes.html)                                          |
+| 4      | simple codes              | the-fourth-r-main/docs/ | [Quarto Presentation](simple-codes.html)                                          |
 | 6      | object types              | the-fourth-r-main/pdfs/ | [PDF Document](../blob/main/pdfs/3-object-types.pdf)                                   |
 | 5      | reading data              | the-fourth-r-main/pdfs/ | [PDF Document](../blob/main/pdfs/2-reading-data.pdf)                                   |
 | 7      | data wrangling            | the-fourth-r-main/pdfs/ | [PDF Document](../blob/main/pdfs/4-data-wrangling.pdf)                                 |
