@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="simple-codes_files/libs/clipboard/clipboard.min.js"></script>
-<script src="simple-codes_files/libs/quarto-html/tabby.min.js"></script>
-<script src="simple-codes_files/libs/quarto-html/popper.min.js"></script>
-<script src="simple-codes_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="simple-codes_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="simple-codes_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="simple-codes_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="reading-data_files/libs/clipboard/clipboard.min.js"></script>
+<script src="reading-data_files/libs/quarto-html/tabby.min.js"></script>
+<script src="reading-data_files/libs/quarto-html/popper.min.js"></script>
+<script src="reading-data_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="reading-data_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="reading-data_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="reading-data_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.1.251">
 
   <meta name="author" content="Ben Dickins">
-  <title>Simple Codes</title>
+  <title>Reading Data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="simple-codes_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="simple-codes_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="reading-data_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="reading-data_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -93,11 +93,11 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="simple-codes_files/libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link href="simple-codes_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="simple-codes_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="simple-codes_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="simple-codes_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="reading-data_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="reading-data_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="reading-data_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="reading-data_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="reading-data_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -388,82 +388,156 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Simple Codes</h1>
-  <p class="subtitle">Arithmetic and Storing Values</p>
+  <h1 class="title">Reading Data</h1>
+  <p class="subtitle">Direct entry, Data frames</p>
   <p class="author">Ben Dickins</p>
 </section>
 
-<section id="expression" class="slide level2">
-<h2>Expression</h2>
-<p>There are three types of expression in R<br>
-1. Numbers: 1, 2, 0.2, -5, etc<br>
-2. Strings: alphabets or anything that is input by “” into R<br>
-3. Logical: <code>TRUE</code>/<code>FALSE</code></p>
+<section id="inputting-data" class="slide level2">
+<h2>Inputting Data</h2>
+<p><code>R</code> allows users to input data using a wide range methods. - Directly by typing the data into R (using <code>scan()</code>) - Reading external files: txt, csv, SAS, SPSS, Excel.</p>
+<p>I encourage you to learn different methods, but we will cover a common and robust use case: handling <code>csv</code> files. For more information follow <a href="https://www.datacamp.com/community/tutorials/r-data-import-tutorial">this advice</a>.</p>
 </section>
-<section id="expression-1" class="slide level2">
-<h2>Expression</h2>
-<ul>
-<li>Numbers:</li>
-</ul>
+<section id="inputting-data-1" class="slide level2">
+<h2>Inputting Data</h2>
+<h3 id="direct-method">Direct Method</h3>
+<p>You can directly input data points one by one using <code>scan()</code><br>
+Do it yourself:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="dv">2</span><span class="sc">+</span><span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>x <span class="ot">&lt;-</span> <span class="fu">scan</span>()</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="dv">13</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="dv">2</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="fl">1.2</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="dv">3</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="dv">18</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="dv">6</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<ul>
-<li>Strings:</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="st">"Hello"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li><code>TRUE</code>/<code>FALSE</code></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="dv">3</span><span class="sc">&lt;</span><span class="dv">4</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="dv">2</span><span class="sc">+</span><span class="dv">4</span> <span class="sc">==</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<p>This is called a <em>base</em> function.</p>
 </section>
-<section id="arithmetic-operators" class="slide level2">
-<h2>Arithmetic Operators</h2>
-<p><code>x + y</code> sum<br>
-<code>x - y</code> subtract<br>
-<code>x * y</code> multiply<br>
-<code>x / y</code> divide<br>
-<code>x ^ y</code> power</p>
-</section>
-<section id="arithmetic-operators-1" class="slide level2">
-<h2>Arithmetic Operators</h2>
-<p>Do it yourself:</p>
+<section id="inputting-data-2" class="slide level2">
+<h2>Inputting Data</h2>
+<h3 id="external-files">External Files</h3>
+<p>External files come in various formats and a number of <em>convenience functions</em> are available:</p>
+<p>- <code>read.table()</code></p>
+<p>- <code>read.csv()</code></p>
+<p>- <code>read.delim()</code></p>
+<p>Before we need to find out our working directory:\<br>
+Do it yourself:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="dv">2</span><span class="sc">+</span><span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 6</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="dv">2</span><span class="sc">^</span><span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 8</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="dv">850</span><span class="sc">/</span><span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 85</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="dv">220-20</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 200</code></pre>
+<pre><code>[1] "/Users/BIO3DICKIB/Library/Mobile Documents/com~apple~CloudDocs/Github/the-fourth-r/docs"</code></pre>
 </div>
 </div>
 </section>
-<section id="storing-values" class="slide level2">
-<h2>Storing Values</h2>
-<ul>
-<li>In all programming languages we can store values in variables and access them later.</li>
-<li>This can be done in various ways using a selection of assignment operators.</li>
-<li>The most commonly used assignment operator is <code>&lt;-</code>, see the example below:</li>
-</ul>
+<section id="inputting-data-3" class="slide level2">
+<h2>Inputting Data</h2>
+<h3 id="setting-paths">Setting Paths</h3>
+<p>You can use <code>dir()</code> to find what is in each directory and <code>setwd()</code> to change to a new working directory.<br>
+</p>
+<p>Do it yourself: We are going to change working directory to the revanent-master folder we put in the OneDrive folder earlier:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>x <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>y <span class="ot">&lt;-</span> <span class="st">"Hey!"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">dir</span>()</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">setwd</span>(<span class="st">"C://PATH/TO/revanent-master"</span>)</span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">dir</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Note: In most contexts the <code>=</code> operator can be used as an alternative.</p>
+</section>
+<section id="do-it-yourself" class="slide level2">
+<h2>Do it yourself:</h2>
+<p>Read the <code>simple.txt</code> data set and store it in a <em>data frame</em> called easy:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>easy <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">'../data/simple.txt'</span>, <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let us look at the first 6 lines of the data:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">head</span>(easy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Deaths PersonYear
+1     32      52407
+2    104      43248
+3    206      28612
+4    186      12663
+5    102       5317
+6      2      18790</code></pre>
+</div>
+</div>
+<p>There’s also an RStudio command (note uppercase letter) for looking at a data frame:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">View</span>(easy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="plotting" class="slide level2">
+<h2>Plotting</h2>
+<p>Now plot the data!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">plot</span>(easy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="reading-data_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<section id="inputting-data-4" class="slide level2">
+<h2>Inputting Data</h2>
+<h3 id="comma-separated">Comma Separated</h3>
+<p>Do it yourself: Read the <code>smoking.csv</code> data set and store it in a data frame called smoking:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>smoking <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'../data/smoking.csv'</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let’s look at the data too:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">View</span>(smoking)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="data-frames" class="slide level2">
+<h2>Data Frames</h2>
+<ul>
+<li>A data frame is a list of variables, each of the same length but <strong>not</strong> necessarily of the <strong>same type</strong>.</li>
+<li>The top line of the table, called the <em>header</em>, contains the column names.</li>
+<li>Each horizontal line afterward denotes a <em>data row</em>, which begins with the name of the row, and then followed by the actual data.</li>
+</ul>
+</section>
+<section id="built-in-data-frames" class="slide level2">
+<h2>Built-in Data Frames</h2>
+<ul>
+<li>We can also call built-in data frames in <code>R</code> for our tutorials.</li>
+<li>This can be done by using the <code>data()</code> command.</li>
+<li>For example, here is a built-in data frame in <code>R</code>, called <code>mtcars</code>.</li>
+</ul>
+</section>
+<section id="do-it-yourself-1" class="slide level2">
+<h2>Do it yourself:</h2>
+<p>Call the <code>R</code> built-in data set mtcars as follows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">data</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let us look at the first 6 lines of the data:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">head</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                   mpg cyl disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
+</div>
+</div>
+<p>Find out more about it:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>  ?mtcars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="the-environment" class="slide level2">
+<h2>The Environment</h2>
+<p>Do it yourself: See all the objects and data in your environment:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">ls</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "easy"    "mtcars"  "smoking"</code></pre>
+</div>
+</div>
+<p>Or you can see it in the top right corner of <code>RStudio</code> (Environment tab).</p>
 <div class="footer footer-default">
 
 </div>
@@ -472,19 +546,19 @@
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="simple-codes_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="reading-data_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="simple-codes_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="simple-codes_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="simple-codes_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="simple-codes_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="simple-codes_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="reading-data_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="reading-data_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="reading-data_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="reading-data_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="reading-data_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="simple-codes_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="simple-codes_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="simple-codes_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="simple-codes_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="reading-data_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="reading-data_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="reading-data_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="reading-data_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

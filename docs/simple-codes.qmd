@@ -1,5 +1,6 @@
 ---
 title: "Simple Codes"
+subtitle: "Arithmetic and Storing Values"
 author: "Ben Dickins"
 format: 
   revealjs:
