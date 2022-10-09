@@ -12,16 +12,16 @@ Please follow the links in this table to view content online:
 | Level  | Skill                     | Location                | Link                                                                                   |
 |--------|---------------------------|-------------------------|----------------------------------------------------------------------------------------|
 | 1      | what is R?                | what-is-r/              | [Quarto Presentation](https://bendickins.net/what-is-r/)                               |
-| 2      | basic plots and tidy data | the-fourth-r-main/docs/ | [HTML R Markdown](scatter-plots.html)                                                  |
-| 3      | Penguin Workshop          | the-fourth-r-main/pdfs/ | [PDF Document](../blob/main/pdfs/PenguinsWorkshop.pdf)                                 |
-| 4      | simple codes              | the-fourth-r-main/docs/ | [Quarto Presentation](simple-codes.html)                                               |
-| 6      | object types              | the-fourth-r-main/pdfs/ | [PDF Document](../pdfs/3-object-types.pdf)                                             |
-| 5      | reading data              | the-fourth-r-main/pdfs/ | [Quarto Presentation](reading-data.html)                                               |
-| 7      | data wrangling            | the-fourth-r-main/pdfs/ | [PDF Document](../pdfs/4-data-wrangling.pdf)                                           |
-| 8      | function                  | the-fourth-r-main/pdfs/ | [PDF Document](../pdfs/5-functions.pdf)                                                |
-| 9      | basic plots                | the-fourth-r-main/pdfs/ | [PDF Document](../pdfs/6-basic-plots.pdf)                                             |
-| 10     | summary statistics        | the-fourth-r-main/pdfs/ | [PDF Document](../pdfs/7-summary-statistics.pdf)                                       |
-| 11     | basic statistics          | the-fourth-r-main/pdfs/ | [PDF Document](../pdfs/8-basic-statistics.pdf)                                         |
+| 2      | simple codes              | the-fourth-r-main/docs/ | [Quarto Presentation](simple-codes.html)                                               |
+| 3      | object types              | the-fourth-r-main/docs/ | [Quarto Presentation](object-types.html)                                               |
+| 4      | reading data              | the-fourth-r-main/docs/ | [Quarto Presentation](reading-data.html)                                               |
+| 5      | basic plots and tidy data | the-fourth-r-main/docs/ | [HTML R Markdown](scatter-plots.html)                                                  |
+| 6      | data wrangling            | the-fourth-r-main/pdfs/ | [PDF Document](../pdfs/4-data-wrangling.pdf)                                           |
+| 7      | function                  | the-fourth-r-main/pdfs/ | [PDF Document](../pdfs/5-functions.pdf)                                                |
+| 8      | basic plots               | the-fourth-r-main/pdfs/ | [PDF Document](../pdfs/6-basic-plots.pdf)                                              |
+| 9      | summary statistics        | the-fourth-r-main/pdfs/ | [PDF Document](../pdfs/7-summary-statistics.pdf)                                       |
+| 10     | basic statistics          | the-fourth-r-main/pdfs/ | [PDF Document](../pdfs/8-basic-statistics.pdf)                                         |
+| 11     | Penguin Workshop          | the-fourth-r-main/pdfs/ | [PDF Document](../blob/main/pdfs/PenguinsWorkshop.pdf)                                 |
 | 12     | introduction to tidyverse | the-fourth-r-main/pdfs/ | [PDF Document](../pdfs/9-tidyverse-introduction.pdf)                                   |
 | 13     | advanced base graphics    | the-fourth-r-main/pdfs/ | [PDF Document](../pdfs/10-advanced-base-graphics.pdf)                                  |
 | 14     | ggplot2 graphics          | the-fourth-r-main/pdfs/ | [PDF Document](../pdfs/11-ggplot2-graphics.pdf)                                        |
