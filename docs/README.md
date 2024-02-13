@@ -21,7 +21,7 @@ Please follow the links in this table to view content online:
 | 8      | basic plots               | the-fourth-r-main/pdfs/ | [PDF Document](https://github.com/tethig/the-fourth-r/raw/main/pdfs/6-basic-plots.pdf)              |
 | 9      | summary statistics        | the-fourth-r-main/pdfs/ | [PDF Document](https://github.com/tethig/the-fourth-r/raw/main/pdfs/7-summary-statistics.pdf)       |
 | 10     | basic statistics          | the-fourth-r-main/pdfs/ | [PDF Document](https://github.com/tethig/the-fourth-r/raw/main/pdfs/8-basic-statistics.pdf)         |
-| 11     | Penguin Workshop          | the-fourth-r-main/pdfs/ | [PDF Document](/blob/main/pdfs/PenguinsWorkshop.pdf)                                                |
+| 11     | Callum's Penguin Workshop | the-fourth-r-main/pdfs/ | [HTML Worksheet](callum-penguins.html)                                                              |
 | 12     | introduction to tidyverse | the-fourth-r-main/pdfs/ | [PDF Document](https://github.com/tethig/the-fourth-r/raw/main/pdfs/9-tidyverse-introduction.pdf)   |
 | 13     | advanced base graphics    | the-fourth-r-main/pdfs/ | [PDF Document](https://github.com/tethig/the-fourth-r/raw/main/pdfs/10-advanced-base-graphics.pdf)  |
 | 14     | ggplot2 graphics          | the-fourth-r-main/pdfs/ | [PDF Document](https://github.com/tethig/the-fourth-r/raw/main/pdfs/11-ggplot2-graphics.pdf)        |
